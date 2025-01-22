@@ -1,0 +1,70 @@
+.btn-arrow {
+  @include clearLink;
+  outline: transparent;
+  font-weight: 700;
+  line-height: 120%;
+  color: $colorMediumPurple;
+}
+.btn-arrow::before {
+  content: 'В каталог';
+  margin-right: 5px;
+  border-bottom: transparent;
+  color: inherit;
+  transition: border-bottom $delay, color $delay;
+}
+.btn-arrow:focus-visible::before {
+  border-bottom: 2px solid $colorMediumPurple;
+}
+.btn-arrow:hover::before {
+  border-bottom: 2px solid $colorMediumPurple;
+}
+.btn-arrow:active::before {
+  border-bottom: 2px solid $colorPurpleHeart;
+  color: $colorPurpleHeart;
+}
+.btn-arrow:disabled {
+  border-bottom: $colorDustyGray;
+  color: transparent;
+  cursor: default;
+}
+
+.arrow-icon {
+  width: 32px;
+  height: 32px;
+  vertical-align: middle;
+  border-radius: 100%;
+  outline: transparent;
+  stroke-width: 2px;
+  stroke: $colorMediumPurple;
+  fill: none;
+  background-color: transparent;
+  transition: background-color $delay, fill $delay, stroke $delay, outline $delay;
+}
+.btn-arrow:focus .arrow-icon {
+  outline: transparent;
+}
+.btn-arrow:focus-visible .arrow-icon {
+  outline: 2px solid $colorMediumPurple;
+  outline-offset: -2px;
+  stroke: $colorWhiteSolid;
+  background-color: $colorMauve;
+}
+.btn-arrow:hover .arrow-icon {
+  outline: 3px solid $colorMediumPurple;
+  outline-offset: -3px;
+  stroke: $colorWhiteSolid;
+  background-color: $colorMediumPurple;
+}
+.btn-arrow:active .arrow-icon {
+  outline: 3px solid $colorPurpleHeart;
+  outline-offset: -3px;
+  stroke: $colorWhiteSolid;
+  background-color: $colorPurpleHeart;
+}
+.btn-arrow:disabled .arrow-icon {
+  outline: none;
+  stroke: $colorDustyGray;
+  fill: none;
+  background-color: transparent;
+  cursor: default;
+}

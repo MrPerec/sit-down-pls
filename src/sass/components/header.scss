@@ -1,0 +1,368 @@
+.header {
+  padding-bottom: 32px;
+
+  &__phone-wrap {
+    @include setContainer();
+  }
+
+  &__phone-link {
+    @include clearLink();
+    @include setTextOverflow();
+
+    position: absolute;
+    top: 17px;
+    outline: transparent;
+    outline-offset: 0;
+    max-width: 290px;
+    font-size: 14px;
+    line-height: 100%;
+    color: $colorCrusta;
+    transition: background-color $delay, color $delay, outline $delay;
+  }
+  &__phone-link:focus {
+    outline: none;
+  }
+  &__phone-link:focus-visible {
+    outline: 1 solid $colorMilkPunch;
+    background-color: $colorMilkPunch;
+  }
+  &__phone-link:hover {
+    color: $colorKoromiko;
+  }
+  &__phone-link:active {
+    outline: transparent;
+    color: $colorRust;
+    background-color: transparent;
+  }
+
+  &__phone-icon {
+    width: 18px;
+    height: 18px;
+    vertical-align: middle;
+    fill: $colorCrusta;
+    transition: fill $delay;
+  }
+  &__phone-link:hover &__phone-icon {
+    fill: $colorKoromiko;
+  }
+  &__phone-link:active &__phone-icon {
+    fill: $colorRust;
+  }
+
+  &__sub-nav {
+    padding: 14px 0;
+    background-color: $colorWildSand;
+  }
+
+  &__sub-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    column-gap: vw(64);
+    @include setContainer;
+  }
+
+  &__container {
+    @include setContainer;
+  }
+
+  &__nav-line {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 32px 0;
+    column-gap: $gridGutterSmall;
+    row-gap: $gridGutter;
+  }
+
+  &__nav-list {
+    justify-content: flex-end;
+    column-gap: vw(92.5);
+    max-width: 970px;
+  }
+
+  &__search-line {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__input-wrap {
+    position: relative;
+    margin-right: 10px;
+    width: 100%;
+    max-width: 1061px;
+  }
+
+  &__input {
+    outline: transparent;
+    border-radius: 10px 0 0 10px;
+    padding: 18px 70px 18px 59px;
+    height: 60px;
+    transition: background-color $delay, outline $delay;
+  }
+  &__input:valid {
+    outline: transparent;
+  }
+
+  &__input ~ &__search-icon {
+    position: absolute;
+    top: 20px;
+    left: 32px;
+    width: 20px;
+    height: 20px;
+    fill: $colorDustyGray;
+    transition: fill $delay;
+  }
+  &__input:valid ~ &__search-icon {
+    fill: $colorMediumPurple;
+  }
+
+  &__btn-dropdown {
+    @include clearBtn;
+
+    position: absolute;
+    top: 14px;
+    right: 32px;
+  }
+
+  &__btn-dropdown::before {
+    content: '';
+    display: none;
+  }
+
+  &__accaunt-wrap {
+    width: 99px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__btn-user {
+    @include clearBtn;
+  }
+
+  &__user-icon {
+    width: 26px;
+    height: 28px;
+  }
+
+  &__basket-wrap {
+    position: relative;
+    width: 41px;
+    height: 28px;
+  }
+
+  &__basket-count {
+    position: absolute;
+    top: 5px;
+    padding: 2px 4px;
+    border-radius: 100%;
+    width: 14px;
+    height: 15px;
+    font-weight: 700;
+    font-size: 10px;
+    line-height: 100%;
+    text-align: center;
+    color: $colorWhiteSolid;
+    background-color: $colorCrusta;
+  }
+
+  &__btn-basket {
+    @include clearBtn;
+    padding-left: 11px;
+  }
+
+  &__basket-icon {
+    width: 30px;
+    height: 28px;
+  }
+
+  &__btn-user,
+  &__btn-basket {
+    height: 28px;
+    outline: transparent;
+    fill: $colorMediumPurple;
+    transition: background-color $delay, fill $delay, outline $delay;
+  }
+  &__btn-user:focus,
+  &__btn-basket:focus {
+    outline: none;
+  }
+  &__btn-user:focus-visible,
+  &__btn-basket:focus-visible {
+    outline: 3px solid $colorMauve;
+    fill: $colorWhiteSolid;
+    background-color: $colorMauve;
+  }
+  &__btn-user:hover,
+  &__btn-basket:hover {
+    outline: transparent;
+    fill: $colorMauve;
+    background-color: transparent;
+  }
+  &__btn-user:active,
+  &__btn-basket:active {
+    outline: transparent;
+    fill: $colorPurpleHeart;
+    background-color: transparent;
+  }
+
+  &__breadcrumbs {
+    padding-top: 18px;
+    max-width: inherit;
+
+    .sub-item:not(:last-child) {
+      margin-right: 5px;
+
+      .sub-link::after {
+        content: '/';
+        padding-left: 5px;
+      }
+    }
+
+    .sub-item:last-child {
+      .sub-link {
+        color: $colorPurpleHeart;
+      }
+    }
+  }
+}
+
+@media (max-width: #{$breakpointDesktop}px) {
+  .header {
+    &__phone-wrap {
+      padding-top: 18px;
+      padding-bottom: 17px;
+    }
+
+    &__phone-link {
+      position: relative;
+      top: 0;
+    }
+
+    &__sub-nav {
+      padding: 15px 0;
+    }
+
+    &__sub-list {
+      justify-content: flex-start;
+      column-gap: vw(64, $vwBreakpointDesktop);
+    }
+
+    &__nav-list {
+      column-gap: vw(42.2, $vwBreakpointDesktop);
+    }
+
+    &__input-wrap {
+      max-width: 733px;
+    }
+
+    &__accaunt-wrap {
+      position: absolute;
+      top: 69px;
+      right: 36px;
+    }
+  }
+}
+
+@media (max-width: #{$breakpointTablet}px) {
+  .header {
+    &__phone-wrap {
+      padding-top: 18px;
+      padding-bottom: 18px;
+    }
+
+    &__sub-list {
+      justify-content: space-between;
+      column-gap: $gridGutterSmall;
+    }
+
+    &__container {
+      position: relative;
+    }
+
+    .nav {
+      width: 100%;
+    }
+
+    &__nav-line {
+      padding: 34px 0;
+    }
+
+    &__nav-list {
+      justify-content: space-between;
+      column-gap: $gridGutterSmall;
+      font-size: 14px;
+    }
+
+    &__input-wrap {
+      margin-right: 0;
+      max-width: 100%;
+    }
+
+    &__accaunt-wrap {
+      top: 33px;
+      right: 72px;
+    }
+  }
+}
+
+@media (max-width: #{$breakpointMobile}px) {
+  .header {
+    &__phone-wrap {
+      position: absolute;
+      top: 65px;
+      padding-top: 14px;
+      padding-bottom: 14px;
+      outline: 1px solid $colorWildSand;
+    }
+
+    &__sub-nav {
+      height: 50px;
+    }
+
+    &__sub-list {
+      display: none;
+    }
+
+    &__container {
+      position: static;
+    }
+
+    .logo-link {
+      position: absolute;
+      top: 12px;
+      left: 50%;
+      transform: translate(-50%);
+    }
+
+    .nav {
+      margin: 0 auto;
+      overflow-x: auto;
+      overflow-y: hidden;
+    }
+
+    &__nav-line {
+      padding-top: 82px;
+      padding-bottom: 16px;
+    }
+
+    &__nav-list {
+      width: 583px;
+      flex-wrap: nowrap;
+    }
+
+    &__accaunt-wrap {
+      top: 76px;
+      right: 12px;
+    }
+
+    &__breadcrumbs {
+      display: none;
+    }
+  }
+}

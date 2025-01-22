@@ -1,0 +1,132 @@
+.offers {
+  padding: 70px 0;
+
+  &__container {
+    @include setContainer();
+  }
+
+  .cards-list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .card {
+    min-height: 511px;
+
+    &__label {
+      top: 30px;
+      left: 0;
+      padding: 8px;
+      max-width: 92px;
+      width: 100%;
+      font-weight: 700;
+      font-size: 14px;
+      text-align: center;
+      color: $colorWhiteSolid;
+      background-image: url('../img/sprite.svg#discount-bg');
+      background-size: cover;
+      background-position: 0;
+    }
+
+    &__img {
+      max-width: 100%;
+    }
+
+    &__title {
+      font-size: 24px;
+    }
+
+    &__price {
+      margin-right: 30px;
+      font-size: 18px;
+      line-height: 130%;
+      color: $colorCrusta;
+    }
+
+    &__price-old {
+      line-height: 130%;
+      text-decoration: line-through;
+      color: $colorDustyGray;
+    }
+
+    &__content-wrap {
+      padding: 0 30px 30px 30px;
+    }
+
+    &__descr-wrap {
+      gap: 23px;
+    }
+  }
+
+  .card-item:nth-child(2) {
+    grid-column: span 2;
+    width: 100%;
+
+    .card {
+      max-width: 624px;
+    }
+  }
+
+  .card-item:nth-last-child(-n + 3) {
+    display: none;
+  }
+}
+
+@media (max-width: #{$breakpointDesktop}px) {
+  .offers {
+    .cards-list {
+      grid-template-columns: repeat(auto-fill, minmax(296px, 1fr));
+    }
+
+    .card {
+      &__schem {
+        display: none;
+      }
+    }
+
+    .card-item:nth-child(2) {
+      grid-column: span 1;
+
+      .card {
+        max-width: 296px;
+
+        &__img {
+          margin-bottom: 48px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: #{$breakpointTablet}px) {
+  .offers {
+    .card-item:nth-child(3) {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: #{$breakpointMobile}px) {
+  .offers {
+    .cards-list {
+      row-gap: 24px;
+    }
+
+    .card__btn {
+      padding: 19px 34px;
+    }
+
+    .card-item:nth-child(3) {
+      display: block;
+    }
+
+    .card-item:nth-last-child(-n + 3) {
+      display: block;
+    }
+
+    .card-item:nth-last-child(2) {
+      .card__img {
+        margin-bottom: 55px;
+      }
+    }
+  }
+}

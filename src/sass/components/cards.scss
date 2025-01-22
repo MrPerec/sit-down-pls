@@ -1,0 +1,113 @@
+.cards-list {
+  @include clearList();
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(296px, 1fr));
+  grid-auto-flow: dense;
+  justify-items: center;
+  gap: $gridGutter;
+
+  @include mobile {
+    grid-template-columns: repeat(2, 1fr);
+    gap: $gridGutterMobile;
+  }
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  justify-self: center;
+  border-radius: $borderRadius;
+  padding-top: 30px;
+  max-width: 296px;
+  width: 100%;
+  min-height: 420px;
+  height: 100%;
+  background-color: $colorWildSand;
+
+  @include mobile {
+    min-height: 278px;
+  }
+
+  &__label {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+
+    @include mobile {
+      top: 16px;
+      left: 12px;
+      font-size: 12px;
+    }
+  }
+
+  &__img {
+    max-width: 100%;
+    object-fit: cover;
+    margin: 0 auto 16px;
+
+    @include mobile {
+      max-width: 108px;
+    }
+  }
+
+  &__content-wrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: $gridGutterSmall;
+    padding: 0 30px 30px 30px;
+    width: 100%;
+
+    @include mobile {
+      padding: 0 16px 16px 16px;
+    }
+  }
+
+  &__descr-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 25px;
+    max-width: 236px;
+
+    @include desktop {
+      gap: 24px;
+    }
+
+    @include mobile {
+      gap: $gridGutterMobile;
+    }
+  }
+
+  &__title {
+    @include clearTitle();
+    max-width: inherit;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 130%;
+    color: $colorMineShaft;
+
+    @include mobile {
+      font-size: 16px;
+    }
+  }
+
+  &__price-wrap {
+    max-width: inherit;
+  }
+
+  &__price {
+    line-height: 130%;
+    color: $colorDoveGray;
+  }
+
+  &__btn {
+    @include mobile {
+      padding: 12px 25px;
+    }
+  }
+}

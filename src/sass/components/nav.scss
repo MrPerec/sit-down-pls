@@ -1,0 +1,31 @@
+.nav-list {
+  @include clearList;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  max-width: inherit;
+}
+
+.nav-item {
+  max-width: inherit;
+}
+
+.nav-link {
+  @include clearLink;
+  outline: transparent;
+  max-width: inherit;
+  color: $colorMineShaft;
+  transition: background-color $delay, color $delay, padding $delay;
+}
+.nav-link:focus-visible {
+  padding: 0 5px;
+  background-color: $colorBlueChalk;
+}
+.nav-link:hover {
+  color: $colorMediumPurple;
+}
+.nav-link:active {
+  color: $colorPurpleHeart;
+  background-color: transparent;
+}

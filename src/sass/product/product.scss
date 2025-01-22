@@ -1,0 +1,273 @@
+.product {
+  padding-top: 12px;
+  margin-bottom: 82px;
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: $gridGutter;
+    row-gap: 111px;
+
+    @include setContainer();
+  }
+
+  &__picture {
+    justify-self: center;
+    align-self: center;
+  }
+
+  &__image {
+    @include setImageWidth();
+  }
+
+  &__header {
+    max-width: 366px;
+  }
+
+  &__header-title {
+    max-width: inherit;
+  }
+
+  &__header-descr {
+    display: block;
+    margin-bottom: 23px;
+    max-width: inherit;
+    font-size: 14px;
+    line-height: 100%;
+    color: $colorDustyGray;
+  }
+
+  &__price {
+    display: block;
+    margin-bottom: 21px;
+    max-width: inherit;
+    font-size: 36px;
+    line-height: 130%;
+    color: $colorMineShaft;
+  }
+
+  &__btns-wrap {
+    max-width: 230px;
+    text-align: center;
+  }
+
+  &__btn-buy {
+    margin-bottom: 12px;
+    padding: 19px 30px;
+    min-height: 54px;
+  }
+
+  &__btn-add {
+    @include clearBtn();
+    outline: none;
+    max-width: inherit;
+    font-size: 16px;
+    line-height: 130%;
+    color: $colorMediumPurple;
+    background-color: transparent;
+    transition: background-color $delay, outline $delay;
+  }
+
+  &__btn-add:focus-visible {
+    outline: 3px solid $colorBlueChalk;
+    color: $colorMineShaft;
+    background-color: $colorBlueChalk;
+  }
+  &__btn-add:hover {
+    color: $colorMauve;
+  }
+  &__btn-add:active {
+    color: $colorPurpleHeart;
+  }
+
+  &__descr {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__descr-text-wrap {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+    margin-bottom: 4px;
+    max-width: 624px;
+  }
+
+  &__descr-title {
+    max-width: inherit;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 100%;
+    color: $colorMineShaft;
+  }
+
+  &__descr-text {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+    max-width: inherit;
+  }
+
+  &__paragraph {
+    @include clearParagraph();
+    max-width: inherit;
+    font-size: 14px;
+    line-height: 180%;
+    color: $colorMineShaft;
+  }
+
+  &__image_schem {
+    max-width: 526px;
+  }
+
+  &__specifications {
+    @include clearList();
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__specification-item {
+    display: flex;
+  }
+
+  &__specification-wrap {
+    display: flex;
+    max-width: 328px;
+    width: 100%;
+  }
+
+  &__specification-name,
+  &__specification-value {
+    font-size: 14px;
+    line-height: 1.79;
+  }
+
+  &__specification-name {
+    max-width: inherit;
+    color: $colorDustyGray;
+  }
+
+  &__specification-dots {
+    flex-grow: 1;
+    border-bottom: 2px dotted $colorDustyGray;
+    margin: 0 5px 7px;
+  }
+
+  &__specification-value {
+    max-width: 216px;
+    width: 100%;
+    color: $colorMineShaft;
+  }
+}
+
+@media (max-width: #{$breakpointDesktop}px) {
+  .product {
+    padding-top: 0;
+    margin-bottom: 69px;
+
+    &__container {
+      grid-template-columns: 1.28fr 1fr;
+      row-gap: 82px;
+    }
+
+    &__specification-wrap {
+      max-width: 187px;
+    }
+  }
+}
+
+@media (max-width: #{$breakpointTablet}px) {
+  .product {
+    margin-bottom: 31px;
+
+    &__container {
+      grid-template-columns: 1fr;
+      row-gap: 0;
+    }
+
+    &__picture {
+      margin-bottom: 82px;
+    }
+
+    &__header {
+      margin-bottom: 82px;
+    }
+
+    &__descr {
+      margin-bottom: 32px;
+      min-height: 324px;
+    }
+
+    &__descr-text {
+      max-width: 74vw;
+    }
+
+    &__specification-wrap {
+      max-width: 100%;
+    }
+  }
+}
+
+@media (max-width: #{$breakpointMobile}px) {
+  .product {
+    margin-top: -8px;
+    margin-bottom: 71px;
+
+    &__picture {
+      margin-bottom: 17px;
+    }
+
+    &__header {
+      margin-bottom: 33px;
+    }
+
+    &__header-title {
+      margin-bottom: 8px;
+      font-size: 16px;
+    }
+
+    &__header-descr {
+      margin-bottom: 16px;
+      font-size: 14px;
+    }
+
+    &__price {
+      margin-bottom: 16px;
+      font-size: 24px;
+    }
+
+    &__btns-wrap {
+      max-width: 100%;
+    }
+
+    &__btn-buy {
+      max-width: 100%;
+      width: 100%;
+    }
+
+    &__descr-text-wrap {
+      margin-bottom: 28px;
+    }
+    &__descr-text {
+      max-width: 100%;
+    }
+
+    &__specifications {
+      row-gap: 7.5px;
+    }
+
+    &__specification-item {
+      flex-direction: column;
+    }
+    &__specification-name {
+      font-size: 10px;
+    }
+    &__specification-dots {
+      display: none;
+    }
+    &__specification-value {
+      line-height: 1.1;
+    }
+  }
+}

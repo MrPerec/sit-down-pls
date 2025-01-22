@@ -1,0 +1,25 @@
+.rating {
+  padding-bottom: 70px;
+
+  .card-item:nth-child(n + 9) {
+    display: none;
+  }
+
+  @include desktop {
+    .card-item:nth-child(n + 7) {
+      display: none;
+    }
+  }
+
+  @include tablet {
+    padding-bottom: 69px;
+  }
+
+  @include mobile {
+    padding-bottom: 70px;
+  }
+
+  &__container {
+    @include setContainer();
+  }
+}

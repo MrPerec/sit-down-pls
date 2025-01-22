@@ -1,0 +1,85 @@
+.banner {
+  padding: 152px 0;
+  background-image: url('../img/banner-1920.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    @include setContainer();
+  }
+
+  &__title {
+    @include clearTitle();
+    max-width: inherit;
+    font-family: $fontFamilySecond, $fontFamilyBase;
+    font-weight: 900;
+    font-size: 60px;
+    line-height: 120%;
+    color: $colorStraw;
+  }
+
+  &__descr {
+    @include clearParagraph();
+    margin-bottom: 49px;
+    max-width: 510px;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 120%;
+    color: $colorWhiteSolid;
+  }
+
+  &__btn {
+    padding: 22px 32px;
+  }
+}
+
+@media (max-width: #{$breakpointDesktop}px) {
+  .banner {
+    padding: 154px 0 150px;
+    background-image: url('../img/banner-1024.jpg');
+  }
+}
+
+@media (max-width: #{$breakpointTablet}px) {
+  .banner {
+    background-image: url('../img/banner-768.jpg');
+
+    &__container {
+      padding: 0 36px;
+    }
+  }
+}
+
+@media (max-width: #{$breakpointMobile}px) {
+  .banner {
+    padding-top: 30px;
+    padding-bottom: 0;
+    background-image: url('../img/banner-320.jpg');
+    background-position: top;
+    background-size: 100%;
+
+    &__container {
+      padding: 0 12px;
+    }
+
+    &__title {
+      font-size: 24px;
+    }
+
+    &__descr {
+      margin-bottom: 142px;
+      max-width: 187px;
+      font-size: 17px;
+    }
+
+    &__btn {
+      max-width: 100%;
+      width: 100%;
+    }
+  }
+}

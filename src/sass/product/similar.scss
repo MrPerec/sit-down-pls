@@ -1,0 +1,35 @@
+.similar {
+  &_container {
+    @include setContainer();
+  }
+
+  &__title {
+    margin-bottom: 22px;
+  }
+
+  .card-item {
+    display: none;
+  }
+  .card-item:nth-child(7) {
+    display: block;
+    order: 1;
+  }
+  .card-item:nth-child(10),
+  .card-item:nth-child(11),
+  .card-item:nth-child(12) {
+    display: block;
+    order: 0;
+  }
+
+  @include desktop {
+    .card-item:nth-child(7) {
+      display: none;
+    }
+  }
+
+  @include tablet {
+    .card-item:nth-child(12) {
+      display: none;
+    }
+  }
+}

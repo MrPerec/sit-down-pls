@@ -1,0 +1,139 @@
+<header class="header">
+  <address class="header__phone-wrap">
+    <a class="header__phone-link" href="tel:+74958854547"
+       aria-label="Совершить звонок на номер телефона +74958854547">
+      <svg class="header__phone-icon">
+        <use xlink:href="./img/sprite.svg#phone-icon"></use>
+      </svg>
+      +7 (495) 885-45-47
+    </a>
+  </address>
+  <nav class="header__sub-nav">
+    <ul class="sub-list header__sub-list">
+      <li class="sub-item header__sub-item">
+        <a class="sub-link" href="#" aria-label="Переход на страницу О компании">
+          О&nbsp;компании
+        </a>
+      </li>
+      <li class="sub-item header__sub-item">
+        <a class="sub-link" href="#" aria-label="Переход на страницу Гарантия и возврат">
+          Гарантия и&nbsp;возврат
+        </a>
+      </li>
+      <li class="sub-item header__sub-item">
+        <a class="sub-link" href="#" aria-label="Переход на страницу Корпоративным клиентам">
+          Корпоративным клиентам
+        </a>
+      </li>
+      <li class="sub-item header__sub-item">
+        <a class="sub-link" href="#" aria-label="Переход на страницу Дизайн-решение">
+          Дизайн-решение
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <div class="header__container">
+    <div class="header__nav-line">
+      <a class="logo-link" href="./index.html" aria-label="Переход на главную страницу">
+        <img class="logo" src="./img/logo.png" alt="Логотип SitDownPls">
+      </a>
+      <nav class="nav">
+        <ul class="nav-list header__nav-list">
+          <li class="nav-item">
+            <a class="nav-link" href="./catalog.html" aria-label="Переход на страницу каталога">
+              Каталог
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" aria-label="Переход на страницу Магазины">
+              Магазины
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" aria-label="Переход на страницу Шоу-рум">
+              Шоу-рум
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" aria-label="Переход на страницу Доставка и оплата">
+              Доставка и&nbsp;оплата
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" aria-label="Переход на страницу Дисконт">
+              Дисконт
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./index.html#contact" aria-label="Переход на раздел формы для связи">
+              Контакты
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="header__search-line">
+      <div class="header__input-wrap">
+        <input class="input header__input js-search-input" type="search" name="search" placeholder="Я хочу купить..."
+               aria-label="Поиск по сайту" minlength="1" required>
+        <svg class="header__search-icon">
+          <use xlink:href="./img/sprite.svg#search-icon"></use>
+        </svg>
+        <button class="btn-arrow header__btn-dropdown js-search-btn" disabled>
+          <svg class="arrow-icon">
+            <use xlink:href="./img/sprite.svg#arrow-icon"></use>
+          </svg>
+        </button>
+      </div>
+      <div class="header__accaunt-wrap">
+        <button class="header__btn-user" aria-label="Открыть личный кабинет">
+          <svg class="header__user-icon">
+            <use xlink:href="./img/sprite.svg#user-icon"></use>
+          </svg>
+        </button>
+        <div class="header__basket-wrap">
+          <span class="header__basket-count">0</span>
+          <button class="header__btn-basket" aria-label="Открыть корзину">
+            <svg class="header__basket-icon">
+              <use xlink:href="./img/sprite.svg#basket-icon"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    @@if (page !== null) {
+    <nav class="header__breadcrumbs">
+      <ul class="sub-list">
+        @@if (page === 'catalog') {
+        <li class="sub-item"><a class="sub-link" href="./index.html"
+             aria-label="Переход на главную страницу">Главная</a></li>
+        <li class="sub-item"><a class="sub-link" href="./catalog.html"
+             aria-label="Переход на страницу Каталог">Каталог</a></li>
+        <li class="sub-item"><a class="sub-link" href="./catalog.html"
+             aria-label="Переход на страницу Диваны">Диваны</a></li>
+        <li class="sub-item"><a class="sub-link" href="#" aria-label="Переход на страницу Прямые диваны">Прямые
+            диваны</a></li>
+        }
+        @@if (page === 'product') {
+        <li class="sub-item"><a class="sub-link" href="./index.html"
+             aria-label="Переход на главную страницу">Главная</a></li>
+        <li class="sub-item"><a class="sub-link" href="./catalog.html"
+             aria-label="Переход на страницу Каталог">Каталог</a></li>
+        <li class="sub-item"><a class="sub-link" href="./catalog.html"
+             aria-label="Переход на страницу Диваны">Диваны</a></li>
+        <li class="sub-item"><a class="sub-link" href="./catalog.html"
+             aria-label="Переход на страницу Прямые диваны">Прямые диваны</a></li>
+        <li class="sub-item"><a class="sub-link" href="#" aria-label="Переход на страницу дивана D-31">D-31</a></li>
+        }
+        @@if (page === 'cooperation') {
+        <li class="sub-item"><a class="sub-link" href="./index.html"
+             aria-label="Переход на главную страницу">Главная</a></li>
+        <li class="sub-item"><a class="sub-link" href="#"
+             aria-label="Переход на страницу Сотрудничество">Сотрудничество</a></li>
+        }
+      </ul>
+    </nav>
+    }
+
+  </div>
+</header>

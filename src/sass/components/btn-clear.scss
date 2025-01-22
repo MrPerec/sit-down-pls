@@ -1,0 +1,35 @@
+.btn-clear {
+  @include clearLink();
+  @include clearBtn();
+  display: block;
+  border-radius: $borderRadius;
+  padding: 17px 35px;
+  outline: 2px solid $colorMediumPurple;
+  outline-offset: 0;
+  max-width: inherit;
+  font-weight: 600;
+  line-height: 100%;
+  text-align: center;
+  color: $colorMediumPurple;
+  background: transparent;
+  transition: background-color $delay, outline $delay, color $delay, cursor $delay;
+}
+.btn-clear:focus-visible {
+  color: $colorWhiteSolid;
+  background-color: $colorMauve;
+}
+.btn-clear:hover {
+  color: $colorWhiteSolid;
+  background-color: $colorMediumPurple;
+}
+.btn-clear:active {
+  outline: 2px solid $colorPurpleHeart;
+  color: $colorWhiteSolid;
+  background-color: $colorPurpleHeart;
+}
+.btn-clear:disabled {
+  color: $colorWhiteSolid;
+  color: $colorDustyGray;
+  background-color: $colorGallery;
+  cursor: default;
+}

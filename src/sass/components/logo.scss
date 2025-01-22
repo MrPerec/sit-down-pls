@@ -1,0 +1,19 @@
+.logo-link {
+  @include clearLink();
+  outline: transparent;
+  transition: outline $delay;
+}
+.logo-link:focus {
+  outline: none;
+}
+.logo-link:focus-visible {
+  outline: 1px solid $colorMediumPurple;
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+.logo {
+  @include setImageWidth();
+  min-width: 187px;
+  vertical-align: middle;
+}

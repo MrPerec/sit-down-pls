@@ -1,0 +1,140 @@
+.cooperation {
+  @include setContainer();
+
+  &__container {
+    max-width: 843px;
+    display: flex;
+    flex-direction: column;
+    row-gap: $gridGutter;
+  }
+
+  &__title {
+    margin-bottom: 0;
+  }
+
+  &__sub-title {
+    margin-bottom: 12px;
+  }
+
+  &__paragraph {
+    @include clearParagraph();
+    // line-height: 1.81;
+    line-height: 1.8;
+    color: $colorDoveGray;
+  }
+
+  &__paragraph_lh {
+    line-height: 1.5;
+  }
+  &__paragraph_pl {
+    padding-left: 10px;
+  }
+
+  &__list {
+    @include clearList();
+  }
+  &__list_ol {
+    padding-left: 18px;
+    list-style-type: decimal;
+  }
+
+  &__item {
+    position: relative;
+  }
+  &__item:not(:last-child) {
+    margin-bottom: 12px;
+  }
+
+  &__item_bg {
+    max-width: 624px;
+    padding-left: 37px;
+  }
+  &__item_bg::before {
+    position: absolute;
+    display: inline-block;
+    width: 72px;
+    left: -23px;
+    top: 0;
+  }
+  &__item_bg:nth-child(1)::before {
+    content: url('../img/sprite.svg#network-bg');
+  }
+  &__item_bg:nth-child(2)::before {
+    content: url('../img/sprite.svg#briefcase-bg');
+  }
+  &__item_bg:nth-child(3)::before {
+    content: url('../img/sprite.svg#git-pull-request-bg');
+  }
+
+  &__item_ol::marker {
+    color: $colorCrusta;
+  }
+
+  &__item-title {
+    margin-bottom: 14px;
+    font-weight: 600;
+    font-size: 16px;
+    color: $colorCrusta;
+  }
+
+  &__text-wrap {
+    padding: 22px 0 22px 109px;
+    max-width: 624px;
+    background-image: url('../img/cooperation-pencil-1920.png');
+    background-repeat: no-repeat;
+    background-position: left center;
+  }
+
+  &__text {
+    font-size: 24px;
+    line-height: 1.5;
+    color: $colorMineShaft;
+  }
+}
+
+@media (max-width: #{$breakpointTablet}px) {
+  .cooperation {
+    &__paragraph_pl {
+      padding-left: 4px;
+    }
+  }
+}
+
+@media (max-width: #{$breakpointMobile}px) {
+  .cooperation {
+    &__container {
+      row-gap: 31px;
+    }
+
+    &__sub-title {
+      font-size: 16px;
+    }
+
+    &__sub-title_fs {
+      font-size: 14px;
+    }
+
+    &__paragraph {
+      font-size: 14px;
+      line-height: 1.79;
+    }
+    &__paragraph_lh {
+      line-height: 1.5;
+    }
+    &__paragraph_pl {
+      padding-left: 7px;
+    }
+
+    &__text-wrap {
+      background-image: url('../img/cooperation-pencil-320.png');
+    }
+
+    &__text {
+      font-size: 16px;
+    }
+
+    &__text-wrap {
+      padding: 0 0 0 52px;
+    }
+  }
+}

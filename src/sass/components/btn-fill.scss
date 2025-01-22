@@ -1,0 +1,34 @@
+.btn-fill {
+  @include clearLink();
+  @include clearBtn();
+  display: block;
+  border-radius: $borderRadius;
+  padding: 22px 50px;
+  outline: transparent;
+  outline-offset: 0;
+  max-width: inherit;
+  font-weight: 700;
+  line-height: 100%;
+  text-align: center;
+  color: $colorWhiteSolid;
+  background-color: $colorMediumPurple;
+  transition: background-color $delay, outline $delay, color $delay, cursor $delay;
+}
+.btn-fill:focus {
+  outline: none;
+}
+.btn-fill:focus-visible {
+  outline: 2px solid $colorPurpleHeart;
+  background-color: $colorMauve;
+}
+.btn-fill:hover {
+  background-color: $colorMauve;
+}
+.btn-fill:active {
+  background-color: $colorPurpleHeart;
+}
+.btn-fill:disabled {
+  color: $colorDustyGray;
+  background-color: $colorGallery;
+  cursor: default;
+}

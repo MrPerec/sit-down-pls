@@ -1,0 +1,32 @@
+.sub-list {
+  @include clearList;
+  max-width: inherit;
+  display: flex;
+  align-items: center;
+}
+
+.sub-item {
+  max-width: inherit;
+}
+
+.sub-link {
+  @include clearLink;
+  outline: transparent;
+  max-width: inherit;
+  font-size: 14px;
+  line-height: 100%;
+  color: $colorDustyGray;
+  transition: background-color $delay, color $delay, padding $delay;
+}
+.sub-link:focus-visible {
+  padding: 0 5px;
+  color: $colorPurpleHeart;
+  background-color: $colorBlueChalk;
+}
+.sub-link:hover {
+  color: $colorMediumPurple;
+}
+.sub-link:active {
+  color: $colorPurpleHeart;
+  background-color: transparent;
+}

@@ -1,0 +1,55 @@
+.hero {
+  padding: 80px 0;
+  background-image: url('../img/hero-banner-1920.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 34%;
+
+  &__container {
+    @include setContainer();
+  }
+
+  &__title {
+    margin-bottom: 49px;
+    max-width: 496px;
+    min-height: 131px;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: normal;
+    color: $colorDustyGray;
+  }
+}
+
+@media (max-width: #{$breakpointDesktop}px) {
+  .hero {
+    background-image: url('../img/hero-banner-1024.jpg');
+  }
+}
+
+@media (max-width: #{$breakpointTablet}px) {
+  .hero {
+    background-image: url('../img/hero-banner-768.jpg');
+  }
+}
+
+@media (max-width: #{$breakpointMobile}px) {
+  .hero {
+    padding: 30px 0 0 0;
+    background-image: url('../img/hero-banner-320.jpg');
+    background-size: initial;
+    background-position: top;
+    background-size: 100%;
+
+    &__title {
+      max-width: 230px;
+      padding-left: 18px;
+      margin-bottom: 82px;
+      font-size: 20px;
+    }
+
+    &__btn {
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+}

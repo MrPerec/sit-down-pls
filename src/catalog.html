@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('./htmlParts/head.html')
+
+<body class="body">
+  @@include('./htmlParts/header.html', { "page": "catalog" } )
+  <main class="main catalog">
+    <h1 class="sub-title catalog__title">Каталог</h1>
+    <aside class="catalog__aside">
+      <div class="catalog__aside-wrap">
+        <h2 class="title catalog__aside-title">Фильтровать по:</h2>
+        <ul class="catalog__aside-list">
+          <li class="catalog__aside-item filter">
+            <h3 class="filter__title">Цвет</h3>
+            <ul class="filter__list">
+              <li class="filter__item">
+                <label class="checkbox-wrap">
+                  <input class="checkbox-input" type="checkbox" name="brown"
+                         aria-label="Применить фильтр по цвету коричневый">
+                  <span class="checkbox-text filter__checkbox-text">Коричневый</span>
+                </label>
+              </li>
+              <li class="filter__item">
+                <label class="checkbox-wrap">
+                  <input class="checkbox-input" type="checkbox" name="black"
+                         aria-label="Применить фильтр по цвету Черный">
+                  <span class="checkbox-text filter__checkbox-text">Черный</span>
+                </label>
+              </li>
+              <li class="filter__item">
+                <label class="checkbox-wrap">
+                  <input class="checkbox-input" type="checkbox" name="blue"
+                         aria-label="Применить фильтр по цвету Синий">
+                  <span class="checkbox-text filter__checkbox-text">Синий</span>
+                </label>
+              </li>
+              <li class="filter__item">
+                <label class="checkbox-wrap">
+                  <input class="checkbox-input" type="checkbox" name="white"
+                         aria-label="Применить фильтр по цвету Белый">
+                  <span class="checkbox-text filter__checkbox-text">Белый</span>
+                </label>
+              </li>
+            </ul>
+          </li>
+          <li class="catalog__aside-item filter">
+            <h3 class="filter__title">Категория</h3>
+            <ul class="filter__list">
+              <li class="filter__item">
+                <label class="checkbox-wrap">
+                  <input class="checkbox-input" type="checkbox" name="sofas"
+                         aria-label="Применить фильтр по Категория Диваны">
+                  <span class="checkbox-text filter__checkbox-text">Диваны</span>
+                </label>
+              </li>
+              <li class="filter__item">
+                <label class="checkbox-wrap">
+                  <input class="checkbox-input" type="checkbox" name="armChairs"
+                         aria-label="Применить фильтр по Категория Кресла">
+                  <span class="checkbox-text filter__checkbox-text">Кресла</span>
+                </label>
+              </li>
+            </ul>
+          </li>
+          <li class="catalog__aside-item filter">
+            <h3 class="filter__title">Цена</h3>
+            <ul class="filter__list filter__list_row">
+              <li class="filter__item">
+                <label class="filter__input-wrap">
+                  <span class="filter__input-text">от</span>
+                  <input class="filter__input" type="number" name="min" placeholder="2000"
+                         aria-label="Применить фильтр по цене от минимальной" required>
+                </label>
+              </li>
+              <li class="filter__item">
+                <label class="filter__input-wrap">
+                  <span class="filter__input-text">до</span>
+                  <input class="filter__input" type="number" name="max" placeholder="150000"
+                         aria-label="Применить фильтр по цене до максимальной" required>
+                </label>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <article class="banner catalog__banner">
+        <img class="banner__image catalog__banner-image" src="./img/banner-catalog.jpg" loading="lazy" alt
+             aria-hidden="true">
+        <div class="banner__container catalog__banner-container">
+          <h2 class="banner__title catalog__banner-title">Оксфорд 1950</h2>
+          <p class="banner__descr catalog__banner-descr">Новая коллекция изысканных кресел</p>
+          <a class="btn-arrow catalog__banner-btn" href="#"
+             aria-label="Ссылка перехода в каталог Новая коллекция изысканных кресел">
+            <svg class="arrow-icon catalog__banner-icon">
+              <use xlink:href="./img/sprite.svg#arrow-icon"></use>
+            </svg>
+          </a>
+        </div>
+      </article>
+    </aside>
+    <section class="catalog__cards">
+      <h2 class="visibility-none" aria-hidden="true">Карточки товара</h2>
+      <!-- карточки вставляем скриптом из json -->
+      <div class="swiper js-slider">
+      </div>
+    </section>
+    <div class="catalog__pagination swiper-pagination js-pagination"></div>
+  </main>
+  @@include('./htmlParts/footer.html')
+</body>
+
+</html>

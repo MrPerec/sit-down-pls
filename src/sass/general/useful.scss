@@ -1,0 +1,99 @@
+.useful {
+  padding-bottom: 70px;
+
+  &__container {
+    @include setContainer();
+  }
+
+  &__cards-list {
+    @include clearList();
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: $gridGutter;
+  }
+
+  &__card-item:nth-last-child(-1n + 3) {
+    display: none;
+  }
+
+  &__card-item {
+    border-radius: $borderRadius;
+    background-color: $colorWildSand;
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-height: 456px;
+  }
+
+  &__card-img {
+    @include setImageWidth();
+  }
+
+  &__card-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 30px;
+    height: 100%;
+    max-width: 564px;
+  }
+
+  &__card-title {
+    @include clearTitle();
+    margin-bottom: 40px;
+    max-width: inherit;
+    font-size: 24px;
+    font-weight: 400;
+    color: $colorMineShaft;
+  }
+}
+
+@media (max-width: #{$breakpointDesktop}px) {
+  .useful {
+    &__cards-list {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    &__card-item:nth-child(3) {
+      display: block;
+    }
+
+    &__card-title {
+      font-size: 16px;
+      margin-bottom: 34px;
+    }
+  }
+}
+
+@media (max-width: #{$breakpointTablet}px) {
+  .useful {
+    &__card-item:nth-child(3) {
+      display: none;
+    }
+
+    &__cards-list {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
+@media (max-width: #{$breakpointMobile}px) {
+  .useful {
+    &__cards-list {
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+
+    &__card-item:nth-last-child(-1n + 3) {
+      display: block;
+    }
+
+    &__card-item:nth-child(3) {
+      display: block;
+    }
+  }
+}

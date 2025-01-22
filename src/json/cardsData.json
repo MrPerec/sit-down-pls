@@ -1,0 +1,82 @@
+{
+  "data": [
+    {
+      "rating": "5,0",
+      "img_path": "./img/rating-sofa_1.png",
+      "name": "Диван кожаный &ldquo;R-94&rdquo;",
+      "price": "94&nbsp;990 руб"
+    },
+    {
+      "rating": "4,9",
+      "img_path": "../img/rating-sofa_2.png",
+      "name": "Диван апартековый &ldquo;T-75&rdquo;",
+      "price": "69&nbsp;990 руб"
+    },
+    {
+      "rating": "4,8",
+      "img_path": "./img/rating-sofa_3.png",
+      "name": "Диван тканевый &ldquo;D-31&rdquo;",
+      "price": "28&nbsp;490 руб"
+    },
+    {
+      "rating": "4,8",
+      "img_path": "./img/rating-sofa_4.png",
+      "name": "Диван велюровый &ldquo;Y-68&rdquo;",
+      "price": "22&nbsp;990 руб"
+    },
+    {
+      "rating": "4,8",
+      "img_path": "./img/rating-sofa_5.png",
+      "name": "Диван из&nbsp;шинила &ldquo;W-95&rdquo;",
+      "price": "22 990 руб"
+    },
+    {
+      "rating": "4,8",
+      "img_path": "./img/rating-sofa_6.png",
+      "name": "Диван флоковый &ldquo;G-41&rdquo;",
+      "price": "17&nbsp;990 руб"
+    },
+    {
+      "rating": "4,8",
+      "img_path": "./img/rating-sofa_7.png",
+      "name": "Диван шиниловый &ldquo;V-43&rdquo;",
+      "price": "19&nbsp;990 руб"
+    },
+    {
+      "rating": "4,7",
+      "img_path": "./img/rating-sofa_8.png",
+      "name": "Диван велюровый &ldquo;S-99&rdquo;",
+      "price": "19&nbsp;990 руб"
+    },
+    {
+      "rating": "4,7",
+      "img_path": "./img/catalog-sofa_9.png",
+      "name": "Диван из&nbsp;кожзама &ldquo;F-85&rdquo;",
+      "price": "26&nbsp;990 руб"
+    },
+    {
+      "rating": "4,5",
+      "img_path": "./img/product-sofa-r-85-1920.png",
+      "name": "Диван велюровый &ldquo;Y-68&rdquo;",
+      "price": "34&nbsp;990 руб"
+    },
+    {
+      "rating": "4,6",
+      "img_path": "./img/product-sofa-h-58-1920.png",
+      "name": "Диван флоковый &ldquo;H-58&rdquo;",
+      "price": "23&nbsp;990 руб"
+    },
+    {
+      "rating": "4,5",
+      "img_path": "./img/product-sofa-s-44-1920.png",
+      "name": "Диван велюровый &ldquo;S-44&rdquo;",
+      "price": "19&nbsp;990 руб"
+    },
+    {
+      "rating": "4,5",
+      "img_path": "./img/product-sofa-s-44-1920.png",
+      "name": "Ещё один диван велюровый &ldquo;S-44&rdquo;",
+      "price": "99&nbsp;999 руб"
+    }
+  ]
+}

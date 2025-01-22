@@ -1,0 +1,37 @@
+@import './vendor/normalize';
+@import './vendor/swiper-bundle.min';
+
+@import 'fonts.scss';
+@import 'variables.scss';
+@import 'functions.scss';
+@import 'mixins.scss';
+@import 'media.scss';
+@import 'common.scss';
+
+@import './components/logo.scss';
+@import './components/sub-list.scss';
+@import './components/nav.scss';
+@import './components/btn-clear.scss';
+@import './components/btn-fill.scss';
+@import './components/btn-arrow.scss';
+@import './components/input.scss';
+@import './components/checkbox.scss';
+@import './components/cards.scss';
+
+@import './components/header.scss';
+@import './components/footer.scss';
+
+@import './general/hero.scss';
+@import './general/offers.scss';
+@import './general/rating.scss';
+@import './general/banner.scss';
+@import './general/category.scss';
+@import './general/useful.scss';
+@import './general/contact.scss';
+
+@import './catalog/catalog.scss';
+
+@import './product/product.scss';
+@import './product/similar.scss';
+
+@import './cooperation/cooperation.scss';

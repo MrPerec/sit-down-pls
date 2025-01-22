@@ -1,0 +1,121 @@
+.contact {
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: $gridGutter;
+    @include setContainer();
+  }
+
+  &__wrap {
+    max-width: 624px;
+  }
+
+  .title {
+    margin-bottom: 9px;
+  }
+
+  .picture {
+    display: flex;
+    align-items: center;
+  }
+
+  &__descr {
+    @include clearParagraph();
+    margin-bottom: 16px;
+    font-size: 14px;
+    color: $colorDustyGray;
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: inherit;
+
+    &__input {
+      margin-bottom: 30px;
+    }
+
+    &__btn {
+      margin-bottom: 10px;
+      padding: 19px 33px;
+    }
+
+    &__checkbox-wrap {
+      max-width: 624px;
+      user-select: none;
+      cursor: pointer;
+    }
+
+    &__checkbox-input {
+      margin-right: 5px;
+    }
+
+    &__checkbox-text {
+      font-size: 14px;
+      color: $colorMineShaft;
+      padding-left: 22px;
+    }
+    &__checkbox-text::before {
+      width: 14px;
+      height: 14px;
+    }
+    &__checkbox-text::after {
+      width: 14px;
+      height: 14px;
+    }
+
+    &__checkbox-link {
+      text-decoration: underline;
+      text-decoration-skip-ink: none;
+      color: $colorMediumPurple;
+    }
+  }
+
+  &__img {
+    @include setImageWidth();
+  }
+}
+
+@media (max-width: #{$breakpointDesktop}px) {
+  .contact {
+    &__container {
+      grid-template-columns: 0.79fr 1fr;
+      justify-content: space-between;
+    }
+
+    &__descr {
+      font-size: 14px;
+    }
+  }
+}
+
+@media (max-width: #{$breakpointTablet}px) {
+  .contact {
+    &__container {
+      grid-template-columns: 2.09fr 1fr;
+    }
+  }
+}
+
+@media (max-width: #{$breakpointMobile}px) {
+  .contact {
+    &__container {
+      grid-template-columns: 1fr;
+    }
+
+    .picture {
+      display: none;
+    }
+
+    &__descr {
+      margin-bottom: 14px;
+    }
+
+    .form {
+      &__checkbox-text {
+        font-size: 12px;
+      }
+    }
+  }
+}
